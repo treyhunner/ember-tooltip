@@ -8,7 +8,9 @@ npm install ember-cli-tooltip --save-dev
 
 ## Basic Usage
 
-  {{date-picker date=mydate valueFormat='YYYY-MM-DD'}}
+  {{tool-tip text="Displayed always" position="top left" tagName="h2"
+              heading="Heading inside tooltip"
+              tip="tooltip body can be any length"}}
 
 ## Demo
 Check out the demo on [github pages](http://gevious.github.io/ember-tooltip/ "Ember-tooltipDemo").
