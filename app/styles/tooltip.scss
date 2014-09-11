@@ -1,0 +1,105 @@
+$dark: #384f59;
+@mixin ember-tooltip-after($position,$top,$right,$bottom,$left) {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    @if $position == 'east' {
+        border-color: transparent transparent transparent $dark;
+    }
+    @if $position == 'west' {
+        border-color: transparent $dark transparent transparent;
+    }
+    @if $position == 'north' {
+        border-color: transparent transparent $dark transparent;
+    }
+    @if $position == 'south' {
+        border-color: $dark transparent transparent transparent;
+    }
+    @if $left != '' {
+        left: $left;
+    }
+    @if $right != '' {
+        right: $right;
+    }
+    @if $top != '' {
+        top: $top;
+    }
+    @if $bottom != '' {
+        bottom: $bottom;
+    }
+
+}
+
+@mixin box-shadow($weight, $settings) {
+    -webkit-box-shadow: rgba(0, 0, 0, $weight) $settings;
+       -mox-box-shadow: rgba(0, 0, 0, $weight) $settings;
+            box-shadow: rgba(0, 0, 0, $weight) $settings;
+}
+
+.ember-tooltip {
+    position: relative;
+    margin-left: 5px;
+    font-size: 15pt;
+
+    div.tip {
+        display: none;
+        position: absolute;
+        background-color: $dark;
+        padding: 10px;
+        width: 200px;
+        opacity: 0;
+        font-family: "Source Sans Pro", sans-serif;
+        color: white;
+        font-size: 11pt;
+        text-align: left;
+        -webkit-border-radius: 3px;
+           -moz-border-radius: 3px;
+                border-radius: 3px;
+        @include box-shadow(0.8, 0 1px 6px);
+        -webkit-transition: all 400ms cubic-bezier(0.175, 0.885, 0.335, 1.05);
+           -moz-transition: all 400ms cubic-bezier(0.175, 0.885, 0.335, 1.05);
+                transition: all 400ms cubic-bezier(0.175, 0.885, 0.335, 1.05);
+    }
+
+    .label {
+        font-size: 11pt;
+    }
+}
+
+.ember-tooltip:hover div.tip {
+    display: block;
+    opacity: 1;
+    z-index: 50;
+}
+
+.ember-tooltip.bottom div.tip {
+    top: 30px;
+}
+.ember-tooltip.top div.tip {
+    bottom: 30px;
+}
+.ember-tooltip.left div.tip {
+    left: 0px;
+}
+.ember-tooltip.right div.tip {
+    right: 0px;
+}
+
+//.ember-tooltip.bottom div.tip:after {
+//    @include ember-tooltip-after('south','',-20px,'','');
+//}
+//
+//.ember-tooltip.top div.tip:after {
+//    @include ember-tooltip-after('north','','',-20px,'');
+//}
+//
+//.ember-tooltip.left div.tip:after {
+//    @include ember-tooltip-after('east','','','',20px);
+//}
+//
+//.ember-tooltip.right div.tip:after {
+//    @include ember-tooltip-after('west','',20px,'','');
+//}
