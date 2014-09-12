@@ -1,6 +1,7 @@
 {
   "predef": [
     "document",
+    "Em",
     "window",
     "location",
     "setTimeout",
