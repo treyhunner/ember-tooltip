@@ -14,6 +14,7 @@ var app = new EmberApp({
   }
 });
 
+app.import('bower_components/ember-cli-tooltip/styles/tooltip.css');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
