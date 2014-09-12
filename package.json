@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-tooltip",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An Ember tooltip component",
   "ember-addon": {
     "main": "lib/ember-cli-tooltip.js"
