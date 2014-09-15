@@ -1,29 +1,25 @@
-#Ember CLI Tooltip
+# Ember-cli-tooltip
 
-## Description
-This is a tooltip component for ember cli projects.
+This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
-npm install ember-cli-tooltip --save-dev
 
-## Basic Usage
+* `git clone` this repository
+* `npm install`
+* `bower install`
 
-  {{tool-tip text="Displayed always" position="top left" tagName="h2"
-              heading="Heading inside tooltip"
-              tip="tooltip body can be any length"}}
+## Running
 
-## Demo
-Check out the demo on [github pages](http://gevious.github.io/ember-tooltip/ "Ember-tooltipDemo").
-Alternatively you can clone this repo and run the app
+* `ember server`
+* Visit your app at http://localhost:4200.
 
-    sudo npm install -g ember-cli
-    git clone git@github.com:gevious/ember-tooltip
-    cd ember-tooltip
-    npm install; bower install
-    ember serve
+## Running Tests
 
-## Requirements
-- Needs scss support, since the stylesheet needs to be imported to work
+* `ember test`
+* `ember test --server`
 
-## Options
-Todo
+## Building
+
+* `ember build`
+
+For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

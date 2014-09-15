@@ -1,7 +1,6 @@
 {
   "predef": [
     "document",
-    "Em",
     "window",
     "location",
     "setTimeout",
@@ -35,6 +34,7 @@
     "fillIn",
     "click",
     "keyEvent",
+    "triggerEvent",
     "find",
     "findWithAssert",
     "wait",

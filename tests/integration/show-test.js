@@ -1,3 +1,4 @@
+import Em from 'ember';
 import startApp from '../helpers/start-app';
 import { test } from 'ember-qunit';
 var App;

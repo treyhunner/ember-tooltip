@@ -1,20 +1,10 @@
-var mergeTrees = require('broccoli-merge-trees');
+/* global require, module */
 
-var appTree    = mergeTrees(['app', 'app-addon'], { overwrite: true });
-var vendorTree = mergeTrees(['bower_components', 'vendor-addon']);
-var templatesTree = mergeTrees(['app/templates', 'templates-addon']);
+var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var app = new EmberAddon();
 
-var app = new EmberApp({
-  trees: {
-    app: appTree,
-    vendor: vendorTree,
-    templates: templatesTree
-  }
-});
-
-app.import('bower_components/ember-cli-tooltip/styles/tooltip.css');
+app.import('vendor/tooltip.css');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
