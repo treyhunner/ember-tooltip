@@ -1,4 +1,8 @@
-{{{text}}}
+{{#if text}}
+  {{{text}}}
+{{else}}
+  {{{yield}}}
+{{/if}}
 <div class="tip">
   <span class="heading">{{{heading}}}</span><br/><br/>
   <p>{{{tip}}}</p>
